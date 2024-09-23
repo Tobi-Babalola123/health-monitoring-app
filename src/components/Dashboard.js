@@ -1,12 +1,12 @@
 import React from "react";
 import {
-  Grid2,
+  Grid,
   Button,
   Paper,
   Typography,
   Box,
   IconButton,
-} from "@mui/material"; // Import IconButton here
+} from "@mui/material";
 import HealthChart from "./HealthChart";
 import HealthInputForm from "./HealthInputForm";
 import AlertNotification from "./AlertNotification";
@@ -23,9 +23,9 @@ const Dashboard = () => {
       <Box
         sx={{ padding: "2rem", backgroundColor: "#f5f5f5", minHeight: "100vh" }}
       >
-        <Grid2 container spacing={4}>
+        <Grid container spacing={4}>
           {/* Health Summary Section */}
-          <Grid2 item xs={12} md={6}>
+          <Grid item xs={12} md={6}>
             <Paper
               elevation={3}
               sx={{ padding: "1.5rem", backgroundColor: "#ffffff" }}
@@ -45,24 +45,32 @@ const Dashboard = () => {
                 View Details
               </Button>
             </Paper>
-          </Grid2>
+          </Grid>
 
           {/* Heart Rate Form Section */}
-          <Grid2 item xs={12} md={6}>
-            <HealthInputForm />
-            <Button
-              variant="contained"
-              color="primary"
-              sx={{ marginTop: "1rem", width: "100%" }}
+          <Grid item xs={12} md={6}>
+            <Paper
+              elevation={3}
+              sx={{ padding: "1.5rem", backgroundColor: "#ffffff" }}
             >
-              Submit Heart Rate
-            </Button>
-          </Grid2>
+              <Typography variant="h5" gutterBottom>
+                Submit Heart Rate
+              </Typography>
+              <HealthInputForm />
+              <Button
+                variant="contained"
+                color="primary"
+                sx={{ marginTop: "1rem", width: "100%" }}
+              >
+                Submit Heart Rate
+              </Button>
+            </Paper>
+          </Grid>
 
           {/* Health Chart and Image Section */}
-          <Grid2 item xs={12}>
-            <Grid2 container spacing={2}>
-              <Grid2 item xs={12} md={6}>
+          <Grid item xs={12}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={6}>
                 <Paper
                   elevation={3}
                   sx={{ padding: "1.5rem", backgroundColor: "#ffffff" }}
@@ -72,32 +80,50 @@ const Dashboard = () => {
                   </Typography>
                   <HealthChart />
                 </Paper>
-              </Grid2>
+              </Grid>
 
-              <Grid2 item xs={12} md={6}>
-                <img
-                  src="https://img.freepik.com/premium-photo/endocrinologist-online-service-platform-thyroid-gland-examination-doctor-examine-hormone-glucose-online-magazine_968529-295623.jpg?uid=R134190840&ga=GA1.2.1695319709.1711572879&semt=ais_hybrid" // Update with your actual image path
-                  alt="Health Monitoring"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    maxHeight: "400px",
-                    objectFit: "cover",
+              <Grid item xs={12} md={6}>
+                <Paper
+                  elevation={3}
+                  sx={{
+                    padding: "1rem",
+                    backgroundColor: "#ffffff",
+                    display: "flex",
+                    justifyContent: "center",
                   }}
-                />
-              </Grid2>
-            </Grid2>
-          </Grid2>
+                >
+                  <img
+                    src="https://img.freepik.com/premium-photo/endocrinologist-online-service-platform-thyroid-gland-examination-doctor-examine-hormone-glucose-online-magazine_968529-295623.jpg?uid=R134190840&ga=GA1.2.1695319709.1711572879&semt=ais_hybrid" // Update with your actual image path
+                    alt="Health Monitoring"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      maxHeight: "400px",
+                      objectFit: "cover",
+                    }}
+                  />
+                </Paper>
+              </Grid>
+            </Grid>
+          </Grid>
 
           {/* Alerts/Notifications */}
-          <Grid2 item xs={12}>
-            <AlertNotification />
-          </Grid2>
+          <Grid item xs={12}>
+            <Paper
+              elevation={3}
+              sx={{ padding: "1.5rem", backgroundColor: "#ffffff" }}
+            >
+              <Typography variant="h5" gutterBottom>
+                Alerts/Notifications
+              </Typography>
+              <AlertNotification />
+            </Paper>
+          </Grid>
 
           {/* New Section: Cards for Tips, Activities, and Contact Information */}
-          <Grid2 container spacing={2}>
+          <Grid container spacing={2}>
             {/* Health Tips Section */}
-            <Grid2 item xs={12} md={4}>
+            <Grid item xs={12} sm={4}>
               <Paper
                 elevation={3}
                 sx={{ padding: "1.5rem", backgroundColor: "#ffffff" }}
@@ -116,10 +142,10 @@ const Dashboard = () => {
                   3. Regular check-ups can help catch issues early.
                 </Typography>
               </Paper>
-            </Grid2>
+            </Grid>
 
             {/* Recent Activities Section */}
-            <Grid2 item xs={12} md={4}>
+            <Grid item xs={12} sm={4}>
               <Paper
                 elevation={3}
                 sx={{ padding: "1.5rem", backgroundColor: "#ffffff" }}
@@ -144,10 +170,10 @@ const Dashboard = () => {
                   View More Activities
                 </Button>
               </Paper>
-            </Grid2>
+            </Grid>
 
             {/* Contact Information Section */}
-            <Grid2 item xs={12} md={4}>
+            <Grid item xs={12} sm={4}>
               <Paper
                 elevation={3}
                 sx={{ padding: "1.5rem", backgroundColor: "#ffffff" }}
@@ -159,9 +185,9 @@ const Dashboard = () => {
                   For support or inquiries, contact us at support@example.com.
                 </Typography>
               </Paper>
-            </Grid2>
-          </Grid2>
-        </Grid2>
+            </Grid>
+          </Grid>
+        </Grid>
       </Box>
 
       {/* Footer Section */}
