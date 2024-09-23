@@ -1,13 +1,27 @@
+/* index.css or App.css */
 body {
+  font-family: "poppins", sans-serif; /* Change font here */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #f4f4f9; /* Light background color */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.button {
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: lightblue; /* Change hover color to light blue */
+}
+
+.sidebar {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 70px; /* Adjust based on your Navbar height */
+  width: 250px; /* Sidebar width */
+  height: calc(100% - 70px); /* Full height minus Navbar height */
+  overflow-y: auto;
 }

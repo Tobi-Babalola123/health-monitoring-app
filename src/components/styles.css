@@ -1,0 +1,125 @@
+/* styles.css */
+body {
+  font-family: "Roboto", sans-serif; /* Change to the font you imported */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+.app-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+}
+
+/* styles.css */
+.dashboard {
+  background-color: #f4f6f9;
+  padding: 20px;
+}
+
+.grid-item {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.chart {
+  background: white; /* White background for charts */
+  padding: 20px; /* Padding around the chart */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px 0;
+  text-align: center;
+}
+
+.form {
+  background: white; /* White background for forms */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert {
+  margin-top: 20px; /* Space above alert notifications */
+}
+
+.card {
+  background-color: #ffffff; /* Card background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Example button animation */
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #ff4081;
+}
+
+/* Card fade-in animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+input {
+  margin-top: 20px; /* Adjust this value as needed */
+}
+
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: #3f51b5;
+}
+
+/* Add this CSS to your styles */
+.heart-rate-input {
+  margin-top: 2rem; /* Adds space below the navbar */
+  padding: 1rem; /* Adds padding around the input */
+  width: 300px; /* Adjust width as needed */
+  border-radius: 5px; /* Slight rounding of edges */
+  border: 1px solid #ccc; /* Add a border */
+}

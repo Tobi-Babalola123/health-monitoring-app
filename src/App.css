@@ -36,3 +36,91 @@
     transform: rotate(360deg);
   }
 }
+
+/* General Page Styles */
+/* body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+} */
+
+body {
+  font-family: "Poppins", sans-serif; /* Use a modern font */
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f5; /* Soft background color */
+}
+
+h2,
+h3 {
+  color: #333; /* Darker text for headings */
+}
+
+.button {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background-color: lightblue; /* Hover color */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.sidebar {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 70px; /* Adjust based on your Navbar height */
+  width: 250px; /* Sidebar width */
+  height: calc(100% - 70px); /* Full height minus Navbar height */
+  overflow-y: auto;
+  transition: transform 0.3s; /* Smooth transition for animations */
+}
+
+/* Navbar Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff9800;
+}
+
+/* Spacing for heart rate input */
+.heart-rate-input {
+  margin-top: 2rem;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Button Styling */
+button {
+  background-color: #1a73e8;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0b5ec5;
+}
